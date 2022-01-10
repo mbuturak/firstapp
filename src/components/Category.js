@@ -30,6 +30,11 @@ export default class Category extends Component {
               key={category.id}
               action
               tag="button"
+              active={
+                this.props.currentCategory === category.categoryName
+                  ? true
+                  : false
+              }
             >
               {category.categoryName}
             </ListGroupItem>
